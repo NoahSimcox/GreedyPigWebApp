@@ -13,13 +13,17 @@ public class HomeController : Controller
         _logger = logger;
     }
 
-    public IActionResult Index()
+    public IActionResult Inputs(string gameType, string strategy, int sitDownAfterRound, int currRoll)
     {
-        return View();
+        
+        return RedirectToAction("PlayGame", new {gameType = gameType, strategy = strategy, sitDownAfterRound = sitDownAfterRound});
     }
 
-    public IActionResult Privacy()
+    public IActionResult PlayGame(string gameType, string strategy, int sitDownAfterRound)
     {
+        ViewData["Game Type Result: "] = gameType;
+        ViewData["strategy Result: "] = strategy;
+        ViewData["Sit Down After Round Result: "] = sitDownAfterRound;
         return View();
     }
 
