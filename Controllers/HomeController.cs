@@ -1,6 +1,7 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using GreedyPigWebApp.Models;
+using Microsoft.VisualBasic;
 
 namespace GreedyPigWebApp.Controllers;
 
@@ -15,15 +16,14 @@ public class HomeController : Controller
 
     public IActionResult Inputs(string gameType, string strategy, int sitDownAfterRound, int currRoll)
     {
+        string info = Program.Main(gameType, strategy, sitDownAfterRound, currRoll);
         
-        return RedirectToAction("PlayGame", new {gameType = gameType, strategy = strategy, sitDownAfterRound = sitDownAfterRound});
+        return RedirectToAction("Output", new {info});
     }
 
-    public IActionResult PlayGame(string gameType, string strategy, int sitDownAfterRound)
+    public IActionResult Output(string gameType, string strategy, int sitDownAfterRound, int currScore, float nextExpectedValue, string info)
     {
-        ViewData["Game Type Result: "] = gameType;
-        ViewData["strategy Result: "] = strategy;
-        ViewData["Sit Down After Round Result: "] = sitDownAfterRound;
+        ViewData["info"] = info;
         return View();
     }
 

@@ -16,8 +16,8 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Noah Simcox\RiderProjects\GreedyPigWebApp\GreedyPigWebApp
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Noah Simcox/RiderProjects/GreedyPigWebApp/GreedyPigWebApp/Views/Home/PlayGame.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQbGF5R2FtZS5jc2h0bWw=
+[C:/Users/Noah Simcox/RiderProjects/GreedyPigWebApp/GreedyPigWebApp/Views/Home/Output.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxPdXRwdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Noah Simcox/RiderProjects/GreedyPigWebApp/GreedyPigWebApp/Views/Shared/Error.cshtml]

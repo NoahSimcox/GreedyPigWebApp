@@ -3,24 +3,19 @@
         <label for="gameType">Game Type:</label>
         <input type="text" name="gameType">
         <button type="submit">Submit</button>
-    </form>
-    <form method="post" asp-action="Inputs">
+        
         <label for="strategy">Strategy:</label>
         <input type="text" name="strategy">
         <button type="submit">Submit</button>
-    </form>
-    <form method="post" asp-action="Inputs">
+        
         <label for="sitDownAfterRound">Sit Down After Round:</label>
         <input type="number" name="sitDownAfterRound">
         <button type="submit">Submit</button>
-    </form>
-    <form method="post" asp-action="Inputs">
+        
         <label for="currRoll">Current Roll:</label>
         <input type="number" name="currRoll">
         <button type="submit">Submit</button>
     </form>
-    
-    <h1> @ViewData["Game Type Result: "]</h1>
-    <h1> @ViewData["strategy Result: "]</h1>
-    <h1> @ViewData["Sit Down After Round Result: "]</h1>
+
+    <h1> @ViewData["info"]</h1>
 </div>

@@ -5,18 +5,19 @@ class Simulator
 {
   private const int DiceMinVal = 1;
   private const int DiceMaxVal = 6;
-  private const int sets = 10000;
+  private const int Sets = 10000;
 
-  public static void Simulate(bool goodStrat, int sitDownAfterRound, float avgScoreIfNotFail, ref int currScore, ref int rolls, ref int rounds, ref int currRoll) {
-
-    Random DieRoll = new Random();
+  public static string Simulate(bool goodStrat, int sitDownAfterRound, float avgScoreIfNotFail, ref int currScore, ref int rolls, ref int rounds, ref int currRoll)
+  {
+    
+    Random dieRoll = new Random();
     int totalRolls = 0;
     int totalRounds = 0;
     int totalPoints = 0;
     int losses = 0;
 
 
-    for (int j = 0; j < sets; j++)
+    for (int j = 0; j < Sets; j++)
     { 
 
       currScore = 0; rolls = -1; rounds = 0; currRoll = 0;
@@ -40,7 +41,7 @@ class Simulator
         }
 
         // rolls the die 
-        currRoll = DieRoll.Next(DiceMinVal, DiceMaxVal+1);
+        currRoll = dieRoll.Next(DiceMinVal, DiceMaxVal+1);
         Console.WriteLine($"role was: {currRoll}");
 
         // checks for a fail state right after the role
@@ -59,13 +60,9 @@ class Simulator
 
     // console outputs
     if (!goodStrat)
-      Console.WriteLine($"Total points gained when sitting down after {sitDownAfterRound} rounds: {totalPoints}");
+      return $"Total points gained when sitting down after {sitDownAfterRound} rounds: {totalPoints}\r\nTotal rolls: {totalRolls}\r\nTotal losses: {losses}\r\nAverage points gained per set: {totalPoints/totalRounds}";
     else
-      Console.WriteLine($"Total points gained when using the score strategy: {totalPoints}");
-    Console.WriteLine($"Average points gained per set: {totalPoints/totalRounds}");
-    Console.WriteLine($"Total rolls: {totalRolls}");
-    Console.WriteLine($"total losses: {losses}");
-
+      return $"Total points gained when using the score strategy: {totalPoints}\r\nTotal rolls: {totalRolls}\r\nTotal losses: {losses}\r\nAverage points gained per set: {totalPoints/totalRounds}";
   }
 
 
