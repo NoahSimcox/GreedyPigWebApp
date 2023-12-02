@@ -5,16 +5,16 @@
       "PackagePath": "staticwebassets\\GreedyPigWebApp.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\Noah Simcox\\RiderProjects\\GreedyPigWebApp\\GreedyPigWebApp\\wwwroot\\ChakraPetch-Regular.ttf",
+      "PackagePath": "staticwebassets\\ChakraPetch-Regular.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Noah Simcox\\RiderProjects\\GreedyPigWebApp\\GreedyPigWebApp\\wwwroot\\PublicPixel-z84yD.ttf",
+      "PackagePath": "staticwebassets\\PublicPixel-z84yD.ttf"
+    },
+    {
       "Id": "C:\\Users\\Noah Simcox\\RiderProjects\\GreedyPigWebApp\\GreedyPigWebApp\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
-    },
-    {
-      "Id": "C:\\Users\\Noah Simcox\\RiderProjects\\GreedyPigWebApp\\GreedyPigWebApp\\wwwroot\\favicon.ico",
-      "PackagePath": "staticwebassets\\favicon.ico"
-    },
-    {
-      "Id": "C:\\Users\\Noah Simcox\\RiderProjects\\GreedyPigWebApp\\GreedyPigWebApp\\wwwroot\\js\\site.js",
-      "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
       "Id": "C:\\Users\\Noah Simcox\\RiderProjects\\GreedyPigWebApp\\GreedyPigWebApp\\wwwroot\\lib\\bootstrap\\LICENSE",
@@ -243,6 +243,14 @@
     {
       "Id": "C:\\Users\\Noah Simcox\\RiderProjects\\GreedyPigWebApp\\GreedyPigWebApp\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\Users\\Noah Simcox\\RiderProjects\\GreedyPigWebApp\\GreedyPigWebApp\\wwwroot\\result.png",
+      "PackagePath": "staticwebassets\\result.png"
+    },
+    {
+      "Id": "C:\\Users\\Noah Simcox\\RiderProjects\\GreedyPigWebApp\\GreedyPigWebApp\\wwwroot\\staypixelregular-eaoxl.ttf",
+      "PackagePath": "staticwebassets\\staypixelregular-eaoxl.ttf"
     },
     {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.GreedyPigWebApp.Microsoft.AspNetCore.StaticWebAssets.props",

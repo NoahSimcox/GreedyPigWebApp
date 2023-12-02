@@ -12,10 +12,7 @@ class Program {
         
         bool goodStrat = bool.Parse(strategy);
 
-
-        if (Convert.ToChar(gameType) == 'p')
-            return Player.Play(goodStrat, sitDownAfterRound, avgScoreIfNotFail, ref currScore, ref rolls, ref currRoll);
-        else
-            return Simulator.Simulate(goodStrat, sitDownAfterRound, avgScoreIfNotFail, ref currScore, ref rolls, ref rounds, ref currRoll);
+        
+        return Simulator.Simulate(goodStrat, sitDownAfterRound, avgScoreIfNotFail, ref currScore, ref rolls, ref rounds, ref currRoll);
     }
 }

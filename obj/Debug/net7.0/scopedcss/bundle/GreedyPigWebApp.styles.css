@@ -10,6 +10,11 @@ a.navbar-brand[b-abi7spjq67] {
 
 a[b-abi7spjq67] {
   color: #0077cc;
+  text-align: center;
+}
+
+header[b-abi7spjq67] {
+  margin-bottom: 20px; /* Add margin-bottom to create space between header and content */
 }
 
 .btn-primary[b-abi7spjq67] {

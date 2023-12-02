@@ -11,8 +11,8 @@ class Simulator
   {
     
     Random dieRoll = new Random();
-    int totalRolls = 0;
-    int totalRounds = 0;
+    float totalRolls = 0f;
+    float totalRounds = 0f;
     int totalPoints = 0;
     int losses = 0;
 
@@ -29,25 +29,21 @@ class Simulator
         rolls++; currScore += currRoll;
 
         // checks for round endings based on strategy
-        if (GoodStrat(goodStrat, rolls, currScore, avgScoreIfNotFail, currRoll))
+        if (GoodStrat(goodStrat, rolls, currScore, avgScoreIfNotFail))
         {
-          Console.WriteLine("volentaraly gave up");
           rounds++; currScore += currRoll; break;
         }
         else if (BadStrat(goodStrat, rolls, sitDownAfterRound))
         {
-          Console.WriteLine("volentaraly gave up");
           rounds++; break;
         }
 
         // rolls the die 
         currRoll = dieRoll.Next(DiceMinVal, DiceMaxVal+1);
-        Console.WriteLine($"role was: {currRoll}");
 
         // checks for a fail state right after the role
         if (currRoll == 5)
         {
-          Console.WriteLine("fail");
           rounds++; losses++; currScore = 0; break;
         }
       }
@@ -60,9 +56,9 @@ class Simulator
 
     // console outputs
     if (!goodStrat)
-      return $"Total points gained when sitting down after {sitDownAfterRound} rounds: {totalPoints}\r\nTotal rolls: {totalRolls}\r\nTotal losses: {losses}\r\nAverage points gained per set: {totalPoints/totalRounds}";
+      return $"Total points gained when sitting down after {sitDownAfterRound} rounds: {totalPoints}\r\n    Total rolls: {totalRolls}\r\n    Total losses: {losses}\r\n    Average points gained per set: {totalPoints/totalRounds}";
     else
-      return $"Total points gained when using the score strategy: {totalPoints}\r\nTotal rolls: {totalRolls}\r\nTotal losses: {losses}\r\nAverage points gained per set: {totalPoints/totalRounds}";
+      return $"Total points gained when using the score strategy: {totalPoints}   Total rolls: {totalRolls}    Total losses: {losses}\r\n    Average points gained per set: {totalPoints/totalRounds}";
   }
 
 
@@ -73,7 +69,7 @@ class Simulator
 
 
   // if your next roll nets a lower score then your current, just cut your losses
-  public static bool GoodStrat(bool goodStrat, int rolls, int currScore, float avgScoreIfNotFail, int currRoll)
+  public static bool GoodStrat(bool goodStrat, int rolls, int currScore, float avgScoreIfNotFail)
   { 
     return (goodStrat && rolls > 0 && currScore >= NextExpectedScore(currScore, avgScoreIfNotFail));
   }

@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/site.css">
+    <link rel="icon" href="result.png"/>
+    <title>Your Cool Page</title>
+</head>
+<body>
+
+<h1> Greedy Pig Game</h1>
+
+<div class="text-center">
+    <form method="post" asp-action="Inputs">
+        <input type="radio" name="gameType" value="p">
+        <label for="gameType">Play in real time</label>
+        
+        <input type="radio" name="gameType" value="s">
+        <label for="gameType">Simulate a game</label><br/>
+
+        <input type="radio" name="strategy" value="true">
+        <label for="strategy">Good strategy</label>
+
+        <input type="radio" name="strategy" value="false">
+        <label for="strategy">Bad strategy</label><br/>
+
+        <label for="sitDownAfterRound">Give up After Round (Only needed for Bad strategy):</label>
+        <input type="number" name="sitDownAfterRound" min="1"><br/>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <p>@ViewData["simResult"]</p>
+</div>
+
+</body>
+</html>

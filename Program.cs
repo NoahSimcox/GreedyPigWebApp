@@ -22,6 +22,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Output}/{id?}");
+    pattern: "{controller=Home}/{action=SimView}/{id?}");
 
 app.Run();

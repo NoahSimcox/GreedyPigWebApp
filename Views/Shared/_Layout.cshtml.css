@@ -9,6 +9,11 @@ a.navbar-brand {
 
 a {
   color: #0077cc;
+  text-align: center;
+}
+
+header {
+  margin-bottom: 20px; /* Add margin-bottom to create space between header and content */
 }
 
 .btn-primary {

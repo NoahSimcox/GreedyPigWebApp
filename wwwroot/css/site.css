@@ -1,22 +1,103 @@
-html {
-  font-size: 14px;
-}
-
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
-
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
-
-html {
-  position: relative;
-  min-height: 100%;
-}
-
 body {
-  margin-bottom: 60px;
+  font-family: 'Roboto', Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+div {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  font-size: 20px;
+}
+
+header {
+  margin-bottom: 20px; /* Add margin-bottom to create space between header and content */
+}
+
+.text-center {
+  text-align: center;
+}
+
+form {
+  background-color: #ffffff;
+  padding: 100px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  margin: 50px;
+}
+
+input[type="number"]{
+  width: 50px;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: pixelFont;
+  src: url("ChakraPetch-Regular.ttf");
+}
+
+/*!* Increase font size and vertical margin for radio inputs and number input *!*/
+/*input[type="radio"], input[type="number"] {*/
+/*  margin: 20px 0; !* Increase vertical margin *!*/
+/*  padding: 20px; !* Increase padding *!*/
+/*  font-size: 18px; !* Increase font size *!*/
+/*}*/
+
+/*!* Display radio inputs and labels on separate lines *!*/
+/*input[type="radio"] + label {*/
+/*  display: block;*/
+/*  margin-bottom: 20px;*/
+/*  font-size: 18px; !* Increase font size *!*/
+/*}*/
+
+label[for="gameType"], label[for="strategy"]{
+  margin-right: 20px;
+  margin-bottom: 5px;
+}
+
+label {
+  font-size: 20px;
+}
+
+
+  button {
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px; /* Increase font size */
+  transition: background-color 0.3s ease;
+  margin-top: 20px; /* Add margin to the button */
+}
+
+button:hover {
+  background-color: #267bbf;
+}
+
+h1 {
+  text-align: center;
+  border-radius: 20px;
+  background-color: #ffffff;
+  color: #333;
+  width: 100%;
+  display: block;
+  font-size: 36px; /* Increase font size */
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+  form {
+    width: 80%;
+  }
 }
